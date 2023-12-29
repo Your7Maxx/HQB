@@ -15,10 +15,10 @@ def run_net_detect(net_args):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="运行文件或命令检测。")
-    parser.add_argument('--file', action='store_true', help="运行文件检测")
-    parser.add_argument('--exec', action='store_true', help="运行命令检测")
-    parser.add_argument('--net', action='store_true', help="运行网络检测")
+    parser = argparse.ArgumentParser(description="File, network, and process behavior detection")
+    parser.add_argument('--file', action='store_true', help="File opening operation detection")
+    parser.add_argument('--exec', action='store_true', help="Process behavior operation detection")
+    parser.add_argument('--net', action='store_true', help="Network request operation detection")
     args, unknown = parser.parse_known_args()
 
     if args.file:
